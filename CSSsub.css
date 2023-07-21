@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
+    --base-color: #000;
+    --link-color: #666;
+    --linkhover-color: #999;
+    --back-color: #f7f7f7;
+    --border-color: #ccc;
+    --white-color: #fff;
+}
+
+html{
+    font-size: 100%;
+}
+
+img {
+	max-width:100%;
+	height: auto;
+}
+
+nav ul a {
+    display:block;
+    color:var(--link-color);
+    text-decoration: none;
+  }
+
+.nostylea {
+    display:block;
+    color:var(--link-color);
+    text-decoration: none;
+    
+  }
+
+.button001 {
+    display:block;
+    color:var(--link-color);
+    text-decoration: none;
+  }
+
+  h1.main a:hover {
+    color: var(--linkhover-color);  /* マウスオーバー時に変化させる色 */
+    background-color: transparent;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;  
+   }
+
+   h1.main {
+    color: var(--link-color);
+    padding: 20px 20px 10px 20px;
+    font-size: 40px;
+    margin-left: -60px;
+    font-weight:lighter
+}
+
+
+
+.telbox {   
+    font-size: 2rem;
+    padding: 2rem 0 0 10rem;
+}
+
+.nav.container{
+    padding: 20px 140px 20px 140px;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav li{
+    display: flex;
+}
+
+.nav a {
+    padding: 10px 60px;  /* 余白をリンクに追加 */
+}
+
+.nav a:hover {
+    background-color: var(--back-color);
+}   
+
+.breadcrumb-001 {
+    display: flex;
+    gap: 0 22px;
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+}
+
+.breadcrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: .3em;
+    height: .3em;
+    margin-left: 10px;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    content: '';
+}
+
+.breadcrumb-001 a {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+h2.subhead{
+    margin: 20px 0 0 60px;
+    border-bottom:3px solid;
+    width:750px;
+
+}
+
+.left-column {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.left-column li {
+    margin: 25px 0 10px 60px;
+    font-size: 16px;
+}
+
+
+.container .column {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+  }
+
+  p {
+    margin-left: 3.5rem;
+  }
+  
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+  }
+  
+  .column1 {
+    background-color: var(--back-color);
+    margin: 1em 1em 0 1em;
+    height: 3em;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+  }
+
+  .button001 {
+    display: flex;
+    justify-content: center;
+    padding: .1em 1em ;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    font-weight: bold;
+  }
+  
+  .button001:hover {
+    border-color: #000;
+  }
+
+  input[type="text"] { width: 100%; height: 30px;} 
+  input[type="email"] { width: 100%; height: 30px;} 
+  textarea {
+    width: 100%;
+    height: 10em;
+    }
+
+
+
+.form{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.forma{
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.input{
+    margin-bottom: 35px;
+    border-color: var(--border-color);
+}
+
+.submit{
+    display:block;
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+.submitbutton{
+    justify-content: center;
+    padding: 1em 2em ;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: bold;
+    background-color: transparent;
+
+  }
+  .submitbutton:hover {
+    border-color: #000;
+  }   
+
+
+.ulliststyle ul{
+    list-style: none;
+}
+
+
+th,td {
+    border-bottom: solid 1px;              /* 枠線指定 */
+    border-color: var(--border-color);
+    font-size: medium;
+    padding: 10px;      /* 余白指定 */
+    text-align:left
+
+    
+}
+ 
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+pre{
+    background-color:rgba(246, 244, 244, 0.99);
+    font-size: large;
+    margin-left: 2rem;
+    margin-top: 10px;
+}
+
+
+
+
+
+.banner {
+    width: 350px;
+    height: auto;
+    margin:2rem 150px 0 0;
+}
+
+.footer-wrap {  /* 新しいラッパー要素にスタイルを追加 */
+    width: 100%;
+    background-color:rgba(246, 244, 244, 0.99);
+}
+
+.footer-container {
+    display: flex;
+    margin-top: 100px; /* 余白を増やすための値に変更してください */
+    margin-bottom: 0px;
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 1200px;
+} 
+
+.footer-column {
+    margin: 60px 30px 60px 30px ;
+    width: 100%;
+}
+
+h3.subhead{
+    border-bottom:3px solid;
+    border-color: var(--border-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight:lighter
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 10px; /* 上部マージンを調節 */
+    margin-bottom: 10px;
+}

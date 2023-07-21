@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 
 :root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
@@ -9,194 +15,132 @@
     --white-color: #fff;
 }
 
+html{
+    font-size: 100%;
+}
+
 img {
 	max-width:100%;
-	height: auto;/*高さ自動*/
+	height: auto;
 }
-    a {
+
+a {
     display:block;
-    color: var(--link-color);
-    text-decoration-line: none;
-}
-
-
-a:hover { 
-    color: var(--linkhover-color);
-}
-a img {
-    margin-bottom: 1rem;
-}
-a img:hover {
-	opacity: 0.8;
-}
-.underline {
-	border-bottom: 3px solid var(--base-color);
-	padding-bottom: 0.5rem;
-}
-
-/*ヘッダー
--------------------------------------*/
-.head {
-	display: flex;
-    flex-direction: row;
-    padding: 1rem 0 0 0;
-}
-
-.head h1 { 
-    padding: 1rem 0;
-}
-.telbox {
-	margin-left: auto;
-	font-size: 3.0rem;
-	padding: 1rem 0 0 0;
-}
-nav ul {
-	display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-	margin-bottom: 1rem;
-}
-nav li {
-    display: block;
-    flex: 1 0 auto;
-}
-nav li a {
+    color:var(--link-color);
     text-decoration: none;
-    text-align: center;
-}
-nav a:hover {
-    background-color: var(--back-color);   
-}
-nav a {
-    padding: 1rem;
+  }
+
+  h1 a:hover {
+    color: var(--linkhover-color);  /* マウスオーバー時に変化させる色 */
+    background-color: transparent;
 }
 
-@media screen and (min-width: 768px){
-/* PC時はMENUボタンを非表示 */
-#open,#close {
-    display: none !important;
+a:hover{
+    background-color: var(--back-color);
 }
 
-#navi {
-    display: block !important;
-}
-}
-
-@media screen and (max-width: 768px){
-.head {
-	flex-direction: column;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.telbox {
-	margin-left: 0;
-	text-align: center;
-}
-.head #open,#close  {
-    position: absolute;
-    top: 28px;
-    right: 12px;
-    }
-nav ul {
-	flex-direction: column;
-}
-
-nav li {
-	padding-top: 0;
-	border-bottom: 1px solid var(--border-color);
-	margin-bottom: 0;
-}
-/* スマホ時はMENUボタンを表示 */
-#open {
-    display: block;
-    background: url(../images/Menu_button.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 12px;
-}
-
-}
-#close  {
-    display: block;
-    background: url(C:\Users\dkuma\OneDrive - 熊倉 大輔\others\asucode\asucode\Menu_button.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 12px;
-}
-/* スマホ時はメニューを非表示 */
-#navi {
-    display: none;
-}
-}
-
-/*メイン画像
--------------------------------------*/
-.mainimg img {
-	width: 100vw;
-}
-
-/*メインコンテンツ
--------------------------------------*/
-main {
-    margin: 5rem 0 5rem 0;
-}
-
-/*新着情報
--------------------------------------*/
 .container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-around;  
+   }
+
+h1 {
+    color: var(--link-color);
+    padding: 20px 20px 10px 20px;
+    font-size: 40px;
+    margin-left: -60px;
+    font-weight:lighter
 }
 
-.left-column, .right-column {
-  width: 45%;
+
+
+.telbox {   
+    font-size: 2rem;
+    padding: 2rem 0 0 10rem;
 }
 
-.left-column ul {
-  list-style: none;
-  padding: 0;
+.nav.container{
+    padding: 20px 140px 20px 140px;
+}
+
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav li{
+    display: flex;
+}
+
+.nav a {
+    padding: 10px 60px;  /* 余白をリンクに追加 */
+}
+
+.nav a:hover {
+    background-color: var(--back-color);
+}
+
+h2{
+    margin: 20px 0 0 60px;
+    border-bottom:3px solid;
+    width:750px;
+
+}
+
+.left-column {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.left-column li {
+    border-bottom:1px solid;
+    list-style: none;
+    margin: 25px 0 10px 60px;
+    font-size: 16px;
+    border-color: var(--border-color);
 }
 
 .banner {
-  margin-bottom: 20px;
+    width: 350px;
+    height: auto;
+    margin:2rem 150px 0 0;
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
+.footer-wrap {  /* 新しいラッパー要素にスタイルを追加 */
+    width: 100%;
+    background-color:rgba(246, 244, 244, 0.99);
 }
 
+.footer-container {
+    display: flex;
+    margin-top: 100px; /* 余白を増やすための値に変更してください */
+    margin-bottom: 0px;
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 1200px;
+} 
 
-/*フッター
--------------------------------------*/
-footer {
-    background-color: var(--back-color);
-    padding: 5rem 0;
-}
-footer h5 {
-    border-bottom: 3px solid var(--border-color);
+.footer-column {
+    margin: 60px 30px 60px 30px ;
+    width: 100%;
 }
 
-/*コピーライト
--------------------------------------*/
-.copyright {
+h3{
+    border-bottom:3px solid;
+    border-color: var(--border-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight:lighter
+}
+
+.copyright{
     text-align: center;
-    padding: 1rem 0;
-    background-color: var(--white-color);
+    margin-top: 10px; /* 上部マージンを調節 */
+    margin-bottom: 10px;
 }
-.copyright a {
-    color: var(--base-color);
-    text-decoration: none;
-	display: inline-block;
-}
+
+
+

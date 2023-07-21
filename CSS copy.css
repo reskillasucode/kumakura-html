@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+:root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
+    --base-color: #000;
+    --link-color: #666;
+    --linkhover-color: #999;
+    --back-color: #f7f7f7;
+    --border-color: #ccc;
+    --white-color: #fff;
+}
+
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+
+a {}
+a:hover { 
+    color: var(--linkhover-color);
+}
+a img {
+    margin-bottom: 1rem;
+}
+a img:hover {
+	opacity: 0.8;
+}
+.underline {
+	border-bottom: 3px solid var(--base-color);
+	padding-bottom: 0.5rem;
+}
+
+/*ヘッダー
+-------------------------------------*/
+.head {
+	display: flex;
+    flex-direction: row;
+    padding: 1rem 0 0 0;
+}
+
+.head h1 { 
+    padding: 1rem 0;
+}
+.telbox {
+	margin-left: auto;
+	font-size: 3.0rem;
+	padding: 1rem 0 0 0;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+	margin-bottom: 1rem;
+}
+nav li {
+    display: block;
+    flex: 1 0 auto;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: var(--back-color);   
+}
+nav a {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.head {
+	flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.telbox {
+	margin-left: 0;
+	text-align: center;
+}
+.head #open,#close  {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+    }
+nav ul {
+	flex-direction: column;
+}
+
+nav li {
+	padding-top: 0;
+	border-bottom: 1px solid var(--border-color);
+	margin-bottom: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open {
+    display: block;
+    background: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+#close  {
+    display: block;
+    background: url(../img/button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+	width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    margin: 5rem 0 5rem 0;
+}
+
+/*新着情報
+-------------------------------------*/
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 45%;
+}
+
+.left-column h2 {
+    border-bottom: 3px solid #000; /* これがアンダーラインを追加するコードです */
+}
+
+
+.left-column li {
+    list-style: none;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #000; /* これがアンダーラインを追加するコードです */
+}
+
+.banner {
+    margin-bottom: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*フッター
+-------------------------------------*/
+.footer-wrapper {
+    background-color: #f2f2f2; /* 背景色を薄いグレーに設定 */
+    width: 100%; /* 幅を100%に設定して、背景色を横いっぱいに広げる */
+}
+
+.footer-container {
+    max-width: 1200px; /* 新着情報とバナーセクションと同じ幅に */
+    margin: 0 auto; /* 左右のマージンを自動にして中央寄せ */
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 30%;
+    text-align: left; /* テキストを左寄せ */
+}
+
+.footer-column h3 {
+    border-bottom: 1px solid #000; /* フッタータイトルの下にアンダーラインを追加 */
+    padding-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--white-color);
+}
+.copyright a {
+    color: var(--base-color);
+    text-decoration: none;
+	display: inline-block;
+}
